@@ -3,22 +3,26 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   :root{
-    font-size: 16px;
+    font-size: 62.5%;
   }
 
-  html, body {
+  *, :after, :before {
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+  }
+
+  html, body, #__next {
+    min-width: 100%;
+    min-width:100%;
     margin: 0;
     padding: 0;
     font-family: 'Space Mono', monospace;
+    font-size: 1.6rem;
   }
 
 `;
 
 export const theme = {
   colors: {
-    primary: "#000",
+    mainFontColor: "#000",
   },
 };
