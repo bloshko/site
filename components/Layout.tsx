@@ -9,9 +9,15 @@ const LayoutWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  padding: 5rem;
+  flex-direction: column;
+  padding: 2.5rem;
 
   color: ${({ theme }) => theme.colors.mainFontColor};
+
+  @media (width >= 50em) {
+    flex-direction: row;
+    padding: 5rem;
+  }
 `;
 
 interface LayoutProps {
@@ -25,8 +31,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
       <LayoutWrapper>
         <Nav />
         <Main>{children}</Main>
-        <Footer />
       </LayoutWrapper>
+      <Footer />
     </ThemeProvider>
   </>
 );

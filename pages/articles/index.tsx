@@ -6,7 +6,7 @@ import styled from "styled-components";
 const ArticlesContainer = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 `;
 
 const ArticlesPage: NextPage = () => {
@@ -30,7 +30,6 @@ Sint officia irure irure consectetur esse commodo veniam officia officia aute co
 Sint officia irure irure consectetur esse commodo veniam officia officia aute consequat ad cillum enim. Ipsum exercitation anim ullamco quis elit nisi anim tempor nisi exercitation. Amet laboris aliqua eiusmod quis officia quis nisi esse labore. Cupidatat ex ut anim officia magna et reprehenderit pariatur occaecat esse labore aliquip laborum nostrud. Pariatur exercitation esse do labore dolor voluptate ex deserunt ad minim in nisi magna velit.
 Sunt Lorem nostrud veniam consectetur consequat nisi ad sint qui non. Officia in consectetur aliquip ullamco minim minim ea amet sit magna fugiat ullamco. Aliquip proident adipisicing mollit proident eu nostrud esse excepteur tempor anim esse."
         />
-
         <ArticlePreview
           alt="noodle head"
           imageSrc="/images/test_images/noodle-head.png"

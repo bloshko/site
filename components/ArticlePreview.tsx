@@ -4,6 +4,8 @@ import Image, { StaticImageData } from "next/image";
 const ArticlePreviewContainer = styled.article`
   display: flex;
   flex-direction: column;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid black;
 `;
 
 const Title = styled.h1`
@@ -11,13 +13,16 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
-  margin: 1rem 0;
+  margin: 0;
 `;
 
 const ImageContainer = styled.div`
   position: relative;
+  height: 25rem;
 
-  height: 40rem;
+  @media (width >= 50em) {
+    height: 40rem;
+  }
 `;
 
 interface ArticlePreviewProps {
