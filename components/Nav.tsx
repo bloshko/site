@@ -8,8 +8,10 @@ const NavContainer = styled.nav`
   display: flex;
   padding: 0;
   justify-content: space-between;
+  margin-bottom: 1.5rem;
 
-  @media (width >= 50em) {
+  @media (min-width: 50em) {
+    margin: 0;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
@@ -30,6 +32,22 @@ const PageLink = styled.a<{ isSelected?: boolean }>`
     `}
 `;
 
+const HomeLinkContainer = styled.div`
+  @media (min-width: 50em) {
+    position: absolute;
+    top: 5rem;
+  }
+`;
+
+const HomeLink = styled.a`
+  text-decoration: none;
+  font-weight: bold;
+
+  :visited {
+    color: ${({ theme }) => theme.colors.mainFontColor};
+  }
+`;
+
 const Nav: React.FC = () => {
   const { asPath } = useRouter();
 
@@ -37,6 +55,11 @@ const Nav: React.FC = () => {
 
   return (
     <NavContainer>
+      <HomeLinkContainer>
+        <Link passHref href={paths.home}>
+          <HomeLink>apepitch</HomeLink>
+        </Link>
+      </HomeLinkContainer>
       <Link passHref href={paths.articles}>
         <PageLink isSelected={isPathSelected(paths.articles)}>
           Articles

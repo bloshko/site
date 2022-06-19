@@ -20,7 +20,7 @@ const ImageContainer = styled.div`
   position: relative;
   height: 25rem;
 
-  @media (width >= 50em) {
+  @media (min-width: 50em) {
     height: 40rem;
   }
 `;

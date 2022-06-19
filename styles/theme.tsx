@@ -9,9 +9,9 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body, #__next {
-    min-width: 100vw;
-    min-height: 100vh;
+  html, body, div#__next {
+    min-width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Space Mono', monospace;

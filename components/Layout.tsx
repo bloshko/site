@@ -13,22 +13,28 @@ const LayoutWrapper = styled.div`
   color: ${({ theme }) => theme.colors.mainFontColor};
   background-color: ${({ theme }) => theme.colors.backgroundColor};
 
-  @media (width >= 50em) {
+  @media (min-width: 50em) {
     flex-direction: row;
     padding: 5rem;
+  }
+
+  @media (min-width: 100em) {
+    padding-left: 30rem;
   }
 `;
 
 interface LayoutProps {
   children: React.ReactNode;
+  hasNav?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, hasNav = true }) => {
   return (
     <>
       <LayoutWrapper>
-        <Nav />
+        {hasNav && <Nav />}
         <Main>{children}</Main>
+        <Footer />
       </LayoutWrapper>
       <Footer />
     </>
