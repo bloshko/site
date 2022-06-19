@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import Head from "@components/Head";
 import ArticlePreview from "@components/ArticlePreview";
 import styled from "styled-components";
+import Layout from "@components/Layout";
 
 const ArticlesContainer = styled.section`
   display: flex;
@@ -11,7 +12,7 @@ const ArticlesContainer = styled.section`
 
 const ArticlesPage: NextPage = () => {
   return (
-    <>
+    <Layout>
       <Head title="Articles" description="My articles" ogImage="test" />
 
       <ArticlesContainer>
@@ -37,7 +38,7 @@ Sunt Lorem nostrud veniam consectetur consequat nisi ad sint qui non. Officia in
           description="Commodo cillum culpa laborum anim voluptate adipisicing id qui.eniam consectetur consequat nisi ad sint qui non. Officia in consectetur aliquip ullamco minim minim ea amet sit magna fugiat ullamco. Aliquip proident adipisicing mollit proident eu nostrud esse excepteur tempor anim esse."
         />
       </ArticlesContainer>
-    </>
+    </Layout>
   );
 };
 

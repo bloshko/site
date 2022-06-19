@@ -1,10 +1,11 @@
 import type { AppProps } from "next/app";
 import Layout from "@components/Layout";
+import StylesWrapper from "@components/StylesWrapper";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Layout>
+  <StylesWrapper>
     <Component {...pageProps} />
-  </Layout>
+  </StylesWrapper>
 );
 
 export default MyApp;

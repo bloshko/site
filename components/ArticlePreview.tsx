@@ -5,7 +5,7 @@ const ArticlePreviewContainer = styled.article`
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
-  border-bottom: 0.2rem solid black;
+  border-bottom: 0.2rem solid ${({ theme }) => theme.colors.borderColor};
 `;
 
 const Title = styled.h1`
@@ -39,7 +39,7 @@ const ArticlePreview: React.FC<ArticlePreviewProps> = ({
   description,
   imageSrc,
   alt,
-  objectPosition = "center center",
+  objectPosition = "left center",
   objectFit = "contain",
 }) => {
   return (
