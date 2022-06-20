@@ -1,24 +1,37 @@
-import React from "react";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   :root{
-    font-size: 16px;
+    font-size: 62.5%;
   }
 
-  html, body {
+  *, :after, :before {
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+  }
+
+  html, body, div#__next {
+    min-width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Space Mono', monospace;
+    font-size: 1.6rem;
   }
 
 `;
 
-export const theme = {
+export const lightTheme = {
   colors: {
-    primary: "#000",
+    mainFontColor: "#000",
+    borderColor: "#000",
+    backgroundColor: "#fff",
+  },
+};
+
+export const darkTheme = {
+  colors: {
+    mainFontColor: "#fff",
+    borderColor: "#fff",
+    backgroundColor: "#000",
   },
 };

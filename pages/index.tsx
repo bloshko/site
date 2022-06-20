@@ -1,13 +1,41 @@
 import type { NextPage } from "next";
-import Head from "next/head";
+import Layout from "@components/Layout";
+import styled from "styled-components";
+import Link from "next/link";
+import { paths } from "@config/paths";
 
-const Home: NextPage = () => {
-  return (
-    <>
-      <main>Home</main>
-      <footer></footer>
-    </>
-  );
-};
+const HomeNav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 38rem;
+`;
+
+const PageLink = styled.a`
+  font-size: 4rem;
+
+  :visited {
+    color: ${({ theme }) => theme.colors.mainFontColor};
+  }
+`;
+
+const Note = styled.p`
+  text-align: end;
+`;
+
+const Home: NextPage = () => (
+  <Layout hasNav={false}>
+    <HomeNav>
+      <Link passHref href={paths.articles}>
+        <PageLink>Articles</PageLink>
+      </Link>
+      <Link passHref href={paths.gallery}>
+        <PageLink>Gallery</PageLink>
+      </Link>
+      <Note>by apepitch</Note>
+    </HomeNav>
+  </Layout>
+);
 
 export default Home;
