@@ -13,30 +13,29 @@ const HomeNav = styled.nav`
 `;
 
 const PageLink = styled.a`
+  font-size: 4rem;
+
   :visited {
     color: ${({ theme }) => theme.colors.mainFontColor};
   }
-  font-size: 4rem;
 `;
 
 const Note = styled.p`
   text-align: end;
 `;
 
-const Home: NextPage = () => {
-  return (
-    <Layout hasNav={false}>
-      <HomeNav>
-        <Link passHref href={paths.articles}>
-          <PageLink>Articles</PageLink>
-        </Link>
-        <Link passHref href={paths.gallery}>
-          <PageLink>Gallery</PageLink>
-        </Link>
-        <Note>by apepitch</Note>
-      </HomeNav>
-    </Layout>
-  );
-};
+const Home: NextPage = () => (
+  <Layout hasNav={false}>
+    <HomeNav>
+      <Link passHref href={paths.articles}>
+        <PageLink>Articles</PageLink>
+      </Link>
+      <Link passHref href={paths.gallery}>
+        <PageLink>Gallery</PageLink>
+      </Link>
+      <Note>by apepitch</Note>
+    </HomeNav>
+  </Layout>
+);
 
 export default Home;

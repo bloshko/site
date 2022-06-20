@@ -9,7 +9,6 @@ const LayoutWrapper = styled.div`
   min-height: 100vh;
   flex-direction: column;
   padding: 2.5rem;
-
   color: ${({ theme }) => theme.colors.mainFontColor};
   background-color: ${({ theme }) => theme.colors.backgroundColor};
 
@@ -28,17 +27,15 @@ interface LayoutProps {
   hasNav?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, hasNav = true }) => {
-  return (
-    <>
-      <LayoutWrapper>
-        {hasNav && <Nav />}
-        <Main>{children}</Main>
-        <Footer />
-      </LayoutWrapper>
+const Layout: React.FC<LayoutProps> = ({ children, hasNav = true }) => (
+  <>
+    <LayoutWrapper>
+      {hasNav && <Nav />}
+      <Main>{children}</Main>
       <Footer />
-    </>
-  );
-};
+    </LayoutWrapper>
+    <Footer />
+  </>
+);
 
 export default Layout;

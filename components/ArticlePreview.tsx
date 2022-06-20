@@ -5,11 +5,12 @@ const ArticlePreviewContainer = styled.article`
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
+  gap: 1rem;
   border-bottom: 0.2rem solid ${({ theme }) => theme.colors.borderColor};
 `;
 
 const Title = styled.h1`
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1rem 0;
 `;
 
 const Description = styled.p`
@@ -41,23 +42,21 @@ const ArticlePreview: React.FC<ArticlePreviewProps> = ({
   alt,
   objectPosition = "left center",
   objectFit = "contain",
-}) => {
-  return (
-    <ArticlePreviewContainer>
-      <Title>{title}</Title>
-      <ImageContainer>
-        <Image
-          src={imageSrc}
-          alt={alt}
-          layout="fill"
-          objectFit={objectFit}
-          objectPosition={objectPosition}
-        />
-      </ImageContainer>
+}) => (
+  <ArticlePreviewContainer>
+    <Title>{title}</Title>
+    <ImageContainer>
+      <Image
+        src={imageSrc}
+        alt={alt}
+        layout="fill"
+        objectFit={objectFit}
+        objectPosition={objectPosition}
+      />
+    </ImageContainer>
 
-      <Description>{description}</Description>
-    </ArticlePreviewContainer>
-  );
-};
+    <Description>{description}</Description>
+  </ArticlePreviewContainer>
+);
 
 export default ArticlePreview;
